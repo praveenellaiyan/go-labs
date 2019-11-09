@@ -6,13 +6,16 @@ import (
 
 func main() {
 
-	alto := vehicle.NewCar(6)
+	// construct new car Alto K10 with max of 6 gears
+	alto := vehicle.NewCar("Alto K10", 6)
 	operate(alto)
 
-	duke := vehicle.NewBike(4)
+	// construct new bike Duke V2 with max of 4 gears
+	duke := vehicle.NewBike("Duke V2", 4)
 	operate(duke)
 }
 
+/* function to operate vehicle that is received */
 func operate(vehicle vehicle.Vehicle) {
 	vehicle.Start()
 	vehicle.GearUp()
